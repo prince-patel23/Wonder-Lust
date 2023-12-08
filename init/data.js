@@ -273,7 +273,7 @@ const sampledataListings = [
     },
     price: 750,
     location: "Costa Rica",
-    country: "Costa Rica",
+    country: "Costa Ric",
   },
   {
     title: "Historic Cottage in Charleston",

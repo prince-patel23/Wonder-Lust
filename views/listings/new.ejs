@@ -1,20 +1,35 @@
 <% layout("/layouts/boilerplate") -%>
 <body>
-    <h3>Create a new listings </h3>
-    <br><br>
-    <form method="POST" action="/listings">
-        <input name="listing[title]" placeholder="enter a title" type="text">
-        <br><br>
-        <textarea name="listing[description]" placeholder="enter the description"></textarea>
-        <br><br>
-        <input name="listing[image]" placeholder="enter the image URL/Link">
-        <br><br>
-        <input name="listing[price]" placeholder="enter the price" type="number">
-        <br><br>
-        <input name="listing[location]" placeholder="enter the location" type="text">
-        <br><br>
-        <input name="listing[country]" placeholder="enter a country" type="text">
-        <br><br>
-        <button>ADD</button>
-    </form>
+  <h3>Create a new listings</h3>
+  <br /><br />
+  <form method="POST" action="/listings">
+    <div>
+      <label for="title" class="form-label">Title</label>
+      <input
+        name="listing[title]"
+        placeholder="enter a title"
+        type="text"
+        class="form-control"
+      />
+    </div>
+    <br /><br />
+    <textarea
+      name="listing[description]"
+      placeholder="enter the description"
+    ></textarea>
+    <br /><br />
+    <input name="listing[image]" placeholder="enter the image URL/Link" />
+    <br /><br />
+    <input name="listing[price]" placeholder="enter the price" type="number" />
+    <br /><br />
+    <input
+      name="listing[location]"
+      placeholder="enter the location"
+      type="text"
+    />
+    <br /><br />
+    <input name="listing[country]" placeholder="enter a country" type="text" />
+    <br /><br />
+    <button>ADD</button>
+  </form>
 </body>

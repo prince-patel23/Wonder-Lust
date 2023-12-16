@@ -112,6 +112,17 @@ body {
   display: flex;
 }
 
+.btns a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400 !important ;
+}
+
+.Edit-btn {
+  height: 2.5rem;
+  background-color: #fe424d !important;
+  border: none !important;
+}
 .show-card {
   padding-left: 0;
   padding-right: 0;

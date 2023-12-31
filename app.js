@@ -63,6 +63,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use((req, res, next) => {
   res.locals.success = req.flash("success");
   res.locals.error = req.flash("error");
+  res.locals.currentUser = req.user;
   next();
 });
 
@@ -80,6 +81,6 @@ app.use((err, req, res, next) => {
   res.status(statusCode).render("listings/error.ejs", { message });
 });
 
-app.listen(3000, () => {
-  console.log("Server is running on port 3000!");
+app.listen(8080, () => {
+  console.log("Server is running on port 8080!");
 });

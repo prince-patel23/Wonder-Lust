@@ -127,3 +127,15 @@ body {
   padding-left: 0;
   padding-right: 0;
 }
+
+.image-container {
+  max-width: 100%; /* Set the maximum width of the container */
+  overflow: hidden; /* Hide overflow to prevent overlap */
+}
+
+#previewImage {
+  width: 100%; /* Make the image fill the container width */
+  height: 100rm; /* Maintain aspect ratio */
+  display: block; /* Remove extra spacing below inline images */
+}
+

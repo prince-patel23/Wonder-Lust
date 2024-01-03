@@ -1,4 +1,4 @@
-if (process.env.NODE_ENV != "production") {
+if (process.env.NODE_ENV !== "production") {
   require("dotenv").config(); //not for production level.
 }
 
@@ -49,8 +49,8 @@ const store = MongoStore.create({
   touchAfter: 24 * 3600,
 });
 
-store.on("error", () => {
-  console.log("ERROR IN MONGO SESSION STORE", err);
+store.on("error", (error) => {
+  console.log("ERROR IN MONGO SESSION STORE", error);
 });
 
 const sessionOptions = {
@@ -91,10 +91,11 @@ app.use("*", (req, res, next) => {
 
 app.use((err, req, res, next) => {
   console.log(err);
-  let { statusCode = 500, message = "somthing went wrong" } = err;
+  let { statusCode = 500, message = "something went wrong" } = err;
   res.status(statusCode).render("listings/error.ejs", { message });
 });
 
-app.listen(8080, () => {
-  console.log("Server is running on port 8080!");
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}!`);
 });

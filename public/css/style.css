@@ -1,5 +1,5 @@
 body {
-  font-family: "Plus Jakarta Sans", sans-serif !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -128,14 +128,8 @@ body {
   padding-right: 0;
 }
 
-.image-container {
-  max-width: 100%; /* Set the maximum width of the container */
-  overflow: hidden; /* Hide overflow to prevent overlap */
+#map {
+  height: 400px;
+  width: 100vh;
+  margin-left: 1rem;
 }
-
-#previewImage {
-  width: 100%; /* Make the image fill the container width */
-  height: 100rm; /* Maintain aspect ratio */
-  display: block; /* Remove extra spacing below inline images */
-}
-
